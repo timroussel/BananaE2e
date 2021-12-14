@@ -1,0 +1,45 @@
+{
+  "name": "funnel_cypress",
+  "version": "2.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@types/chai": "^4.2.16",
+    "@types/mocha": "^5.2.7",
+    "husky": "^3.1.0",
+    "prettier": "^1.19.1",
+    "pretty-quick": "^2.0.2",
+    "typescript": "^3.9.9",
+    "webpack": "4.41.2"
+  },
+  "scripts": {
+    "cy:verify": "cypress verify",
+    "cy:open": "cypress open",
+    "delete:reports": "rimraf results/* || true",
+    "prereport": "npm run delete:reports",
+    "mergeReports": "npx mochawesome-merge --reportDir results > mochawesome.json",
+    "generateMochawesomeReport": "npm run mergeReports && npx mochawesome-report-generator mochawesome.json --reportDir results --reportFilename funnel.test.e2e.report",
+    "YUC FR": "-----------------------------------------------",
+    "cy:run:yuc:fr:desktop:prod": "npm run prereport && cypress run --spec \"cypress/integration/fr.spec.ts\" --env environment=prod --browser chrome",
+    "cy:run:yuc:fr:mobile:prod": "npm run prereport && cypress run --spec \"cypress/integration/fr-mobile.spec.ts\" --env environment=prod --browser chrome"
+  },
+  "author": "",
+  "license": "ISC",
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^8.10.66",
+    "codice-fiscale-js": "^2.3.9",
+    "cypress": "^7.2.0",
+    "cypress-multi-reporters": "^1.4.0",
+    "mocha": "^6.2.3",
+    "mocha-junit-reporter": "^1.23.3",
+    "mochawesome": "^6.2.2",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^5.2.0",
+    "rimraf": "^3.0.2"
+  }
+}

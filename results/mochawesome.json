@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 0,
+    "passes": 0,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-11-03T15:55:29.941Z",
+    "end": "2021-11-03T15:56:44.059Z",
+    "duration": 74118,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 1,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "fab336fb-e6c5-4e20-86fe-9145242f3936",
+      "title": "",
+      "fullFile": "cypress/integration/fr.spec.ts",
+      "file": "cypress/integration/fr.spec.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8989ccd3-923f-4db1-9808-ca3a40e0ec71",
+          "title": "FR SMOKE prod : 2021-11-03T15:55:28 ",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should succesfuly do an application until the contact step",
+              "fullTitle": "FR SMOKE prod : 2021-11-03T15:55:28  should succesfuly do an application until the contact step",
+              "timedOut": null,
+              "duration": 0,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "start_1.overrideFunnelStartPage(params);\nemail_1.handleEmailPage(params);\nfamily_situation_1.handleFamilySituationPage(params);\nhousing_1.handleHousingPage(params);\nprofessional_situation_1.handleMainApplicantProfessionalSituationPage(params);\nincomes_1.handleIncomesPage(params);\noutcomes_1.handleOutcomesPage(params);\nbank_1.handleBankPage(params);\nidentity_1.handleYucIdentityPage(params);\ncontact_1.handleContactPage(params);",
+              "err": {
+                "message": "CypressError: `cy.screenshot()` timed out waiting `30000ms` to complete.",
+                "estack": "CypressError: `cy.screenshot()` timed out waiting `30000ms` to complete.\n    at https://fr-funnel.younited-credit.com/__cypress/runner/cypress_runner.js:139894:22\n    at tryCatcher (https://fr-funnel.younited-credit.com/__cypress/runner/cypress_runner.js:10791:23)\n    at https://fr-funnel.younited-credit.com/__cypress/runner/cypress_runner.js:5913:41\n    at tryCatcher (https://fr-funnel.younited-credit.com/__cypress/runner/cypress_runner.js:10791:23)\n    at Promise._settlePromiseFromHandler (https://fr-funnel.younited-credit.com/__cypress/runner/cypress_runner.js:8726:31)\n    at Promise._settlePromise (https://fr-funnel.younited-credit.com/__cypress/runner/cypress_runner.js:8783:18)\n    at Promise._settlePromise0 (https://fr-funnel.younited-credit.com/__cypress/runner/cypress_runner.js:8828:10)\n    at Promise._settlePromises (https://fr-funnel.younited-credit.com/__cypress/runner/cypress_runner.js:8904:18)\n    at _drainQueueStep (https://fr-funnel.younited-credit.com/__cypress/runner/cypress_runner.js:5498:12)\n    at _drainQueue (https://fr-funnel.younited-credit.com/__cypress/runner/cypress_runner.js:5491:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://fr-funnel.younited-credit.com/__cypress/runner/cypress_runner.js:5507:5)\n    at Async.drainQueues (https://fr-funnel.younited-credit.com/__cypress/runner/cypress_runner.js:5377:14)",
+                "diff": null
+              },
+              "uuid": "2f6140a2-4751-45d7-ba8d-b899fd49274a",
+              "parentUUID": "8989ccd3-923f-4db1-9808-ca3a40e0ec71",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": ["2f6140a2-4751-45d7-ba8d-b899fd49274a"],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "mochaFile": "results/my-test-output.xml",
+        "toConsole": false,
+        "reportDir": "results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

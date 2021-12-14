@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.0000" tests="1" failures="1">
+  <testsuite name="Root Suite" timestamp="2021-11-03T15:55:29" tests="0" file="cypress/integration/fr.spec.ts" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="FR SMOKE prod : 2021-11-03T15:55:28 " timestamp="2021-11-03T15:55:29" tests="1" time="0.0000" failures="1">
+    <testcase name="FR SMOKE prod : 2021-11-03T15:55:28  should succesfuly do an application until the contact step" time="0.0000" classname="should succesfuly do an application until the contact step">
+      <failure message="`cy.screenshot()` timed out waiting `30000ms` to complete." type="CypressError"><![CDATA[CypressError: `cy.screenshot()` timed out waiting `30000ms` to complete.
+    at https://fr-funnel.younited-credit.com/__cypress/runner/cypress_runner.js:139894:22
+    at tryCatcher (https://fr-funnel.younited-credit.com/__cypress/runner/cypress_runner.js:10791:23)
+    at https://fr-funnel.younited-credit.com/__cypress/runner/cypress_runner.js:5913:41
+    at tryCatcher (https://fr-funnel.younited-credit.com/__cypress/runner/cypress_runner.js:10791:23)
+    at Promise._settlePromiseFromHandler (https://fr-funnel.younited-credit.com/__cypress/runner/cypress_runner.js:8726:31)
+    at Promise._settlePromise (https://fr-funnel.younited-credit.com/__cypress/runner/cypress_runner.js:8783:18)
+    at Promise._settlePromise0 (https://fr-funnel.younited-credit.com/__cypress/runner/cypress_runner.js:8828:10)
+    at Promise._settlePromises (https://fr-funnel.younited-credit.com/__cypress/runner/cypress_runner.js:8904:18)
+    at _drainQueueStep (https://fr-funnel.younited-credit.com/__cypress/runner/cypress_runner.js:5498:12)
+    at _drainQueue (https://fr-funnel.younited-credit.com/__cypress/runner/cypress_runner.js:5491:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://fr-funnel.younited-credit.com/__cypress/runner/cypress_runner.js:5507:5)
+    at Async.drainQueues (https://fr-funnel.younited-credit.com/__cypress/runner/cypress_runner.js:5377:14)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,55 @@
+# Node.js
+- task: Npm@1
+  displayName: 'npm install'
+  inputs:
+    verbose: false
+- task: Npm@1
+  displayName: 'npm run cy:verify'
+  inputs:
+    command: custom
+    verbose: false
+    customCommand: 'run cy:verify'
+- task: Npm@1
+  displayName: 'npm run $(taskToRun)'
+  inputs:
+    command: custom
+    verbose: false
+    customCommand: 'run $(taskToRun)'
+  continueOnError: true
+- task: terraformworkspace@0
+  inputs:
+    cwd: 'Cypress - FR - QA'
+    workspacename: 'SourceHub'
+    useazurerm: false
+# Build a general Node.js project with npm.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '10.x'
+  displayName: 'Install Node.js'
+
+- script: |
+    npm install
+  displayName: 'npm install'
+
+- task: Npm@1
+  inputs:
+    command: 'custom'
+    customCommand: 'run test'
+
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'JUnit'
+    testResultsFiles: '*.xml'
+    searchFolder: '$(System.DefaultWorkingDirectory)/cypress/reports/junit'
+    mergeTestResults: true
+    testRunTitle: 'Publish test results'

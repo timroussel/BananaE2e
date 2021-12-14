@@ -1,0 +1,14 @@
+{
+  "projectId": "zwu6um",
+  "env": {
+    "environment": "prod"
+  },
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+    "configFile": "reporter-config.json"
+  },
+  "screenshotsFolder": "results/screenshots",
+  "videosFolder": "results/videos",
+  "chromeWebSecurity": false,
+  "defaultCommandTimeout": 10000
+}

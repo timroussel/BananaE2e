@@ -1,0 +1,11 @@
+{
+  "reporterEnabled": "junit, spec, mocha-junit-reporter, mochawesome",
+  "reporterOptions": {
+    "mochaFile": "results/my-test-output.xml",
+    "toConsole": false,
+    "reportDir": "results",
+    "overwrite": false,
+    "html": false,
+    "json": true
+  }
+}
